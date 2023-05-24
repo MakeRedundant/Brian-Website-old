@@ -6,7 +6,6 @@ body {
   #hello {
     position: relative;
     font-size: 60px;
-    /*font-color: Gold;*/
   }
 
   p {
@@ -23,7 +22,46 @@ body {
     font-size: 40px;
     
   }
-  
+    #About {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;  
+  } 
+
+  #Experience {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #Skills {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+  } 
+
+  #Projects {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+#Contact {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
   #Codingtext {
     font-size: 30px;
     font-family: Courier;
@@ -36,7 +74,7 @@ body {
     align-items: center;
     justify-content: center;
   }
-  
+   /*Navigtion bar*/
   ul {
     list-style-type: none;
     margin: 0;
@@ -127,25 +165,27 @@ body {
     width: 600px;
     margin: 30px auto;
   }
+
      /* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-  ul a {font-size: 40px;} 
-  }
-
-  /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-  ul a {font-size: 40px;} 
-}
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-  ul a {font-size: 30px;} 
-}
-  /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-  ul a {font-size: 30px;} 
-}
-  /* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-  ul a {font-size: 30px;} 
-}
+     @media only screen and (max-width: 600px) {
+      ul a {font-size: 40px;} 
+      }
+    
+      /* Small devices (portrait tablets and large phones, 600px and up) */
+    @media only screen and (min-width: 600px) {
+      ul a {font-size: 40px;} 
+    }
+    
+    /* Medium devices (landscape tablets, 768px and up) */
+    @media only screen and (min-width: 768px) {
+      ul a {font-size: 30px;} 
+    }
+      /* Large devices (laptops/desktops, 992px and up) */
+    @media only screen and (min-width: 992px) {
+      ul a {font-size: 30px;} 
+    }
+      /* Extra large devices (large laptops and desktops, 1200px and up) */
+    @media only screen and (min-width: 1200px) {
+      ul a {font-size: 30px;} 
+    }
+  
