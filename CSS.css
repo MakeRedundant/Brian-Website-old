@@ -42,10 +42,21 @@ body {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    flex-wrap: nowrap;
     align-items: center;
-    justify-content: center;
   } 
+
+  .table-container {
+    display: flex;
+    margin-right: 20px;
+  }
+
+  table {
+    border-collapse: collapse;
+  }
+  table, th, td {
+    border: 1px solid black;
+
+  }
 
   #Projects {
     height: 100vh;
