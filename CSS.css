@@ -6,7 +6,6 @@ body {
   #hello {
     position: relative;
     font-size: 60px;
-    /*font-color: Gold;*/
   }
 
   p {
@@ -23,8 +22,7 @@ body {
     font-size: 40px;
     
   }
-
-  #About {
+    #About {
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -76,7 +74,7 @@ body {
     align-items: center;
     justify-content: center;
   }
-    /*Navigtion bar*/
+   /*Navigtion bar*/
   ul {
     list-style-type: none;
     margin: 0;
@@ -162,8 +160,9 @@ body {
     left: 160px;
   }
 
-.Container-image { 
-  height: 400px;
-  width: 600px;
-  margin: 30px auto;
-}
+  .Container-image { 
+    height: 400px;
+    width: 600px;
+    margin: 30px auto;
+  }
+  
