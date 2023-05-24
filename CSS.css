@@ -97,6 +97,7 @@ body {
     border-radius: 5px;
     white-space: nowrap;
   }
+
   .dark-mode #dark-mode-toggle-nav:after {
     content: "Enable Light Mode";
   }
