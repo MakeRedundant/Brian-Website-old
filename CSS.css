@@ -8,18 +8,7 @@ body {
     font-size: 60px;
     /*font-color: Gold;*/
   }
-/*
-  #About {
-   
-  }  
-  #Experience {
-    padding-top: 200px;
-  }
-  
-  #Skills {
-    padding-top: 200px;
-  }
-*/
+
   p {
     font-size: 30px;
     font-family: "Times New Roman", Serif;
@@ -95,7 +84,7 @@ body {
   .dark-mode #dark-mode-toggle-nav span:before {
     content: "🌙";
   }
-  #dark-mode-toggle-nav:hover:after {
+  #dark-mode-toggle-nav:after {
     content: "Enable Dark Mode";
     position: absolute;
     bottom: -10px;
@@ -108,11 +97,11 @@ body {
     border-radius: 5px;
     white-space: nowrap;
   }
-  .dark-mode #dark-mode-toggle-nav:hover:after {
+  .dark-mode #dark-mode-toggle-nav:after {
     content: "Enable Light Mode";
   }
   
-  #hello:hover:after {
+  #hello:after {
     content: "Click me!";
     position: relative;
     top: -50px;
