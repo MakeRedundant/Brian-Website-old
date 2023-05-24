@@ -1,129 +1,128 @@
 body {
-    margin: 0;
-    transition: background-color 0.5s ease;
-  }
-  
-  #hello {
-    position: relative;
-    font-size: 60px;
-    /*font-color: Gold;*/
-  }
+  margin: 0;
+  transition: background-color 0.5s ease;
+}
 
-  p {
-    font-size: 30px;
-    font-family: "Times New Roman", Serif;
-  }
-  
-  h1 {
-    color: Gold;
-    
-  }
-  
-  h2, h3, h4, h5, h6 {
-    font-size: 40px;
-    
-  }
-  
-  #Codingtext {
-    font-size: 30px;
-    font-family: Courier;
-  }
+#hello {
+  position: relative;
+  font-size: 60px;
+  /*font-color: Gold;*/
+}
 
-  .fullscreen {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    background-color: black;
-    display: flex;
-  }
-  
-  li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
-  
-  li a:hover {
-    background-color: green;
-  }
-  .dark-mode {
-    background-color: black;
-    color: white;
-  }
-  #dark-mode-toggle-nav {
-    background-color: gray;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    line-height: 44px;
-    margin-left: auto;
-  }
-  
-  #dark-mode-toggle-nav span {
-    font-size: 25px;
-  }
-  #dark-mode-toggle-nav span:before {
-    content: "☀️";
-  }
-  .dark-mode #dark-mode-toggle-nav span:before {
-    content: "🌙";
-  }
-  #dark-mode-toggle-nav:after {
-    content: "Enable Dark Mode";
-    position: absolute;
-    bottom: -10px;
-    right: 0; /* Align the tooltip with the right edge of the button */
-    transform: translateX(-50%);
-    background-color: #333;
-    color: white;
-    padding: 2px 5px;
-    font-size: 12px;
-    border-radius: 5px;
-    white-space: nowrap;
-  }
-  .dark-mode #dark-mode-toggle-nav:hover:after {
-    content: "Enable Light Mode";
-  }
-  
-  #hello:after {
-    content: "Click me!";
-    position: relative;
-    top: -50px;
-    right: 70px;
-    background-color: #333;
-    color: white;
-    padding: 2px 5px;
-    font-size: 20px;
-    border-radius: 5px;
-  }
-  
-  img {
-    width: 300px;
-    max-width: 300px;
-    position: relative;
-    height: auto;
-    left: 160px;
-  }
+p {
+  font-size: 30px;
+  font-family: "Times New Roman", Serif;
+}
 
-  .Container-image { 
-    height: 400px;
-    width: 600px;
-    margin: 30px auto;
-  }
+h1 {
+  color: Gold;
   
+}
+
+h2, h3, h4, h5, h6 {
+  font-size: 40px;
+  
+}
+
+#Codingtext {
+  font-size: 30px;
+  font-family: Courier;
+}
+
+.fullscreen {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: black;
+  display: flex;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: green;
+}
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+#dark-mode-toggle-nav {
+  background-color: gray;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 44px;
+  margin-left: auto;
+}
+
+#dark-mode-toggle-nav span {
+  font-size: 25px;
+}
+#dark-mode-toggle-nav span:before {
+  content: "☀️";
+}
+.dark-mode #dark-mode-toggle-nav span:before {
+  content: "🌙";
+}
+#dark-mode-toggle-nav:after {
+  content: "Enable Dark Mode";
+  position: absolute;
+  bottom: -10px;
+  right: 0; /* Align the tooltip with the right edge of the button */
+  transform: translateX(-50%);
+  background-color: #333;
+  color: white;
+  padding: 2px 5px;
+  font-size: 12px;
+  border-radius: 5px;
+  white-space: nowrap;
+}
+.dark-mode #dark-mode-toggle-nav:hover:after {
+  content: "Enable Light Mode";
+}
+
+#hello:after {
+  content: "Click me!";
+  position: relative;
+  top: -50px;
+  right: 70px;
+  background-color: #333;
+  color: white;
+  padding: 2px 5px;
+  font-size: 20px;
+  border-radius: 5px;
+}
+
+img {
+  width: 300px;
+  max-width: 300px;
+  position: relative;
+  height: auto;
+  left: 160px;
+}
+
+.Container-image { 
+  height: 400px;
+  width: 600px;
+  margin: 30px auto;
+}
