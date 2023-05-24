@@ -6,7 +6,6 @@ body {
   #hello {
     position: relative;
     font-size: 60px;
-    /*font-color: Gold;*/
   }
 
   p {
@@ -23,7 +22,46 @@ body {
     font-size: 40px;
     
   }
-  
+    #About {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;  
+  } 
+
+  #Experience {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #Skills {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+  } 
+
+  #Projects {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+#Contact {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
   #Codingtext {
     font-size: 30px;
     font-family: Courier;
@@ -36,7 +74,7 @@ body {
     align-items: center;
     justify-content: center;
   }
-  
+   /*Navigtion bar*/
   ul {
     list-style-type: none;
     margin: 0;
