@@ -125,13 +125,13 @@ body {
   #dark-mode-toggle-nav:after {
     content: "Enable Dark Mode";
     position: absolute;
-    bottom: -10px;
+    bottom: 5px; /*Aligns the toop tip to the right of the button */
     right: 0; /* Align the tooltip with the right edge of the button */
     transform: translateX(-50%);
     background-color: #333;
     color: white;
     padding: 2px 5px;
-    font-size: 12px;
+    font-size: 24px;
     border-radius: 5px;
     white-space: nowrap;
   }
