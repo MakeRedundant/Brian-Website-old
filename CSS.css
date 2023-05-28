@@ -14,37 +14,42 @@ body {
   }
   
   h1 {
-    color: Gold;
+    color: gold;
     
   }
   
-  h2, h4, h5, h6, h7 {
+  h2, h3, h4, h5, h6 {
     font-size: 40px;
     
   }
 
-  h3 {
-    font-size: 180px;
-    opacity: 0.6;
-    position: relative;
-    top: 50%;
-    left: 0;
-    transform: translate(-50%, -50%);
+  .header-about {
+    font-size: 120px;
+    opacity: 0;
+    position: absolute;
+    left: 0px;
     z-index: -1;
-    animation: slide-in 10s ease-out forwards;
+    animation: fade-in 4s ease-out infinite;
   }
   
-  @keyframes slide-in {
+  @keyframes fade-in {
     0% {
-      transform: translateX(-100%);
       opacity: 0;
     }
     100% {
-      transform: translateX(0);
       opacity: 0.6;
     }
   }
-
+  
+  .header-experience {
+    font-size: 160px;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    z-index: -1;
+    animation: fade-in 4s ease-out infinite;
+  }
+  
     #About {
     height: 100vh;
     display: flex;
@@ -53,10 +58,6 @@ body {
     justify-content: center;  
     text-align: center; /* Add text-align: center to center the content horizontally */
   } 
-
-  #About h3 {
-    margin-bottom: -350px; /* Adjust the value as desired */
-  }
 
   #Experience {
     height: 100vh;
@@ -67,7 +68,7 @@ body {
   }
 
   #Skills {
-    height: 100vh;
+    height: 100vh; /* Set section height to full viewport height */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -126,6 +127,26 @@ body {
     display: flex;
   }
   
+  li:nth-child(1) a {
+    color: blue;
+  }
+  
+  li:nth-child(2) a {
+    color: green;
+  }
+  
+  li:nth-child(3) a {
+    color: yellow;
+  }
+  
+  li:nth-child(4) a {
+    color: red;
+  }
+  
+  li:nth-child(5) a {
+    color: purple;
+  }
+  
   li a {
     display: block;
     color: white;
@@ -135,7 +156,7 @@ body {
   }
   
   li a:hover {
-    background-color: green;
+    background-color: white;
   }
   .dark-mode {
     background-color: black;
@@ -200,8 +221,6 @@ body {
   }
 
   .Container-image { 
-    height: 400px;
-    width: 600px;
     margin: 30px auto;
     margin-top: 0;
     display: flex;
@@ -223,20 +242,37 @@ body {
   }
   
 
-  /*Media Queries */
-     /* Extra small devices (phones, 600px and down) */
-     @media only screen and (max-width: 600px) {
-      ul a {font-size: 40px;}
-      p {font-size: 40px;}
-      }
-    
-    /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) and (max-width: 768px) {
-  ul a, p {
+/* Media Queries */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  ul a {
     font-size: 40px;
   }
+  p {
+    font-size: 40px;
+  }
+  /* Default font sizes for animation elements */
+  #About .header-about,
+  #Experience .header-experience,
+  #Skills .header-skills {
+    animation: none;
+  }
 }
-    
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+  ul a,
+  p {
+    font-size: 40px;
+  }
+  /* Default font sizes for animation elements */
+  #About .header-about,
+  #Experience .header-experience,
+  #Skills .header-skills {
+    animation: none;
+  }
+}
+
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 769px) and (max-width: 992px) {
   ul a {
@@ -244,6 +280,12 @@ body {
   }
   p {
     font-size: 40px;
+  }
+  /* Default font sizes for animation elements */
+  #About .header-about,
+  #Experience .header-experience,
+  #Skills .header-skills {
+    animation: none;
   }
 }
 
@@ -255,10 +297,26 @@ body {
   p {
     font-size: 30px;
   }
+  /* Default font sizes for animation elements */
+  #About .header-about,
+  #Experience .header-experience,
+  #Skills .header-skills {
+    animation: none;
+  }
 }
-      /* Extra large devices (large laptops and desktops, 1200px and up) */
-    @media only screen and (min-width: 1200px) {
-      ul a {font-size: 30px;} 
-      p {font-size: 30px;}
-    }
-  
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1201px) {
+  ul a {
+    font-size: 30px;
+  }
+  p {
+    font-size: 30px;
+  }
+  /* Default font sizes for animation elements */
+  #About .header-about,
+  #Experience .header-experience,
+  #Skills .header-skills {
+    animation: 120px;
+  }
+}
