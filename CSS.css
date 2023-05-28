@@ -51,10 +51,10 @@ body {
   }
 
   table {
-    border-collapse: collapse;
+    border: 10px solid;
   }
   table, th, td {
-    border: 1px solid black;
+    border: 10px solid black;
 
   }
 
