@@ -5,34 +5,31 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="CSS.css">
-
- </head>   
-    <style>
-    </style>
 </head>
 <body>
+  <header>
+    <nav>
+      <ul>
+        <li><a class="active" href="#About">About</a></li>
+        <li><a href="#Experience">Experience</a></li>
+        <li><a href="#Skills">Skills</a></li>
+        <li><a href="#Projects">Projects</a></li>
+        <li><a href="#Contact">Contact</a></li>
+        <li id="dark-mode-toggle-nav"><span></span></li>
+      </ul>
+    </nav>
+  </header>
 
-  <ul>
-    <li><a class="active" href="#About">About</a></li>
-    <li><a href="#Experience">Experience</a></li>
-    <li><a href="#Skills">Skills</a></li>
-    <li><a href="#Projects">Projects</a></li>
-    <li><a href="#Contact">Contact</a></li>
-    <li id="dark-mode-toggle-nav">
-    <span></span>
-    </li>
-  </ul>
-
-<div class="fullscreen">
+  <section id="hello-section" class="fullscreen">
     <h1 id="hello" onclick="changeLanguage()">Hello</h1>
-    <p>My name is Brian and I'm a software engineer.</p>
-    <p>I like to eat good clothes 🍔 and wear good food 👔.</p>
+    <p>My name is Brian, and I'm a software engineer</p>
+    <p>I like to eat good food 👔 and wear good clothes. 🍔</p>
     <br>
     <div id="Codingtext"></div>
-      <p> Look around, have some fun <br> and I hope to hear back from you!</p>
-</div>
+    <p>Look around, have some fun, and I hope to hear back from you!</p>
+  </section>
   
-  <div id="About"> 
+  <section id="About"> 
     <h2>Brian T</h2>
     <div class="Container-image">
       <img src="./assets/Paedriatic-Gls.jpg" alt="My Mug shot">
@@ -42,15 +39,62 @@
       When i'm not coding you can find me binge watching youtube coding tutorials or cat videos.
         </p>
     </div>
-  </div>
+  </section>
   
-  
-  <div id="Experience">
+  <section id="Experience">
     <h3>Experience</h3>
-    <p> Insert lack of experience here </p>
-  </div>
-  
-<div id="Skills">
+    <p>Insert lack of experience here</p>
+  </section>
+  <section id="Skills">
+    <h4>Skills</h4>
+    <table> 
+      <tr>
+        <th>Language</th>
+      </tr>
+      <tr>
+        <td>HTML</td>
+      </tr>
+      <tr>
+        <td>CSS</td>
+      </tr>
+      <tr>
+        <td>JavaScript</td>
+      </tr>
+    </table>
+    
+    <table>
+      <tr>
+        <th>Framework</th>
+      </tr>
+      <tr>
+        <td>HTML</td>
+      </tr>
+      <tr>
+        <td>CSS</td>
+      </tr>
+      <tr>
+        <td>JavaScript</td>
+      </tr>
+    </table>
+    
+    <table>
+      <tr>
+        <th>Language</th>
+      </tr>
+      <tr>
+        <td>HTML</td>
+      </tr>
+      <tr>
+        <td>CSS</td>
+      </tr>
+      <tr>
+        <td>JavaScript</td>
+      </tr>
+    </table>
+  </section>
+
+<section id="Projects">
+<section id="Skills">
     <h4>Skills</h4>
    <table> 
      <div class="table-container">
@@ -67,7 +111,6 @@
       <td>JavaScript</td>
     </tr>
   </table>
- 
     <tr>
       <th>Framework</th>
     </tr>
@@ -96,23 +139,29 @@
       <td>JavaScript</td>
     </tr>
   </table>
-</div>
+</section>
 
-  <div id="Projects">
+  <section id="Projects">
     <h5>Projects</h5>
-    <p> text....... </p>
-  </div>
+    <p>text.......</p>
+  </section>
   
-  <div id="Contact">
+ 
+  <section id="Contact">
     <h6>Contact</h6>
     <p> text....... </p>
-  </div>
+  </section>
   
 
 
 <script src="script.js"></script>
 
 </body>
+
+<footer>
+
+
+</footer>
 
 </body>
 </html>
