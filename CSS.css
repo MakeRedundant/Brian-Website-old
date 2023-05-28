@@ -28,6 +28,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;  
+    text-align: center; /* Add text-align: center to center the content horizontally */
   } 
 
   #Experience {
@@ -168,13 +169,17 @@ body {
     max-width: 300px;
     position: relative;
     height: auto;
-    left: 160px;
   }
 
   .Container-image { 
     height: 400px;
     width: 600px;
     margin: 30px auto;
+    display: flex;
+    flex-direction: column; /* Add flex-direction: column */
+    justify-content: flex-start; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    gap: 20px; /* Add gap between image and paragraph */
   }
 
      /* Extra small devices (phones, 600px and down) */
