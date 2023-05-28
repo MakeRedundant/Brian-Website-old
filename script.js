@@ -56,6 +56,5 @@ function toggleDarkMode() {
     document.body.classList.remove("dark-mode");
   }
 }
-
 const darkModeToggleNav = document.querySelector("#dark-mode-toggle-nav");
 darkModeToggleNav.addEventListener("click", toggleDarkMode);
