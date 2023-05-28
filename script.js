@@ -1,3 +1,4 @@
+// Array of languages with their respective texts and flags
 let languages = [
   { text: "Hola", flag: "es" },
   { text: "Bonjour", flag: "fr" },
@@ -23,29 +24,30 @@ let languages = [
 ];
 let index = 0;
 
+// Function to change the language
 function changeLanguage() {
   let language = languages[index];
-  document.getElementById(
-    "hello"
-  ).innerHTML = `<span id="flag" class="flag-icon flag-icon-${language.flag}"></span> ${language.text}`;
+  document.getElementById("hello").innerHTML = `<span id="flag" class="flag-icon 
+  flag-icon-${language.flag}"></span> ${language.text}`;
   index = (index + 1) % languages.length;
 }
-//For the Coding is ... effect
-var message = "CODING is pretty fun as well 💻";
-var messageindex = 0;
-var interval = setInterval(function () {
-  document.getElementById("Codingtext").innerHTML += message.charAt(
-    messageindex
-  );
-  messageindex++;
-  if (messageindex > message.length) {
+
+// "Coding is ..." effect
+let message = "CODING is pretty fun as well 💻";
+let messageIndex = 0;
+let interval = setInterval(function () {
+  document.getElementById("Codingtext").innerHTML += message.charAt(messageIndex);
+  messageIndex++;
+  if (messageIndex > message.length) {
     // Reset the message index and clear the text
-    messageindex = 0;
+    messageIndex = 0;
     document.getElementById("Codingtext").innerHTML = "";
   }
 }, 100);
-//For the dark mode button
+
+// Toggle dark mode
 let darkMode = false;
+
 function toggleDarkMode() {
   darkMode = !darkMode;
   if (darkMode) {
@@ -54,5 +56,6 @@ function toggleDarkMode() {
     document.body.classList.remove("dark-mode");
   }
 }
+
 const darkModeToggleNav = document.querySelector("#dark-mode-toggle-nav");
 darkModeToggleNav.addEventListener("click", toggleDarkMode);
