@@ -22,7 +22,7 @@ body {
     font-size: 40px;
     
   }
-
+ /*Animation for About*/
   .header-about {
     font-size: 120px;
     opacity: 0;
@@ -40,9 +40,9 @@ body {
       opacity: 0.6;
     }
   }
-  
+  /*Animation for Experience*/
   .header-experience {
-    font-size: 160px;
+    font-size: 120px;
     opacity: 0;
     position: absolute;
     right: 0;
@@ -114,55 +114,67 @@ body {
     align-items: center;
     justify-content: center;
   }
-   /*Navigtion bar*/
-  ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    background-color: black;
-    display: flex;
-  }
-  
-  li:nth-child(1) a {
-    color: blue;
-  }
-  
-  li:nth-child(2) a {
-    color: green;
-  }
-  
-  li:nth-child(3) a {
-    color: yellow;
-  }
-  
-  li:nth-child(4) a {
-    color: red;
-  }
-  
-  li:nth-child(5) a {
-    color: purple;
-  }
-  
-  li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
-  
-  li a:hover {
-    background-color: white;
-  }
+/* Navigtion bar */
+
+.nav {
+  position: fixed;
+  display: flex;
+}
+
+ul.nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: black;
+  display: flex;
+}
+
+li:nth-child(1) a {
+  color: blue;
+}
+
+li:nth-child(2) a {
+  color: green;
+}
+
+li:nth-child(3) a {
+  color: yellow;
+}
+
+li:nth-child(4) a {
+  color: red;
+}
+
+li:nth-child(5) a {
+  color: purple;
+}
+
+li.nav-item {
+  text-align: center; /* Center the text horizontally */
+}
+
+ul.nav a {
+  display: block;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul.nav a:hover {
+  background-color: white;
+}
+
+/*Dark Mode */
   .dark-mode {
     background-color: black;
     color: white;
   }
   #dark-mode-toggle-nav {
+    margin-left: auto;
     background-color: gray;
     border: none;
     cursor: pointer;
@@ -170,7 +182,6 @@ body {
     align-items: center;
     justify-content: center;
     line-height: 44px;
-    margin-left: auto;
   }
   
   #dark-mode-toggle-nav span {
@@ -240,6 +251,57 @@ body {
     background-color: #333333; /* Dark background color */
     color: white; /* Light text color */
   }
+
+/*Skills section */
+.skill-image {
+  position: relative;
+  display: inline-block;
+}
+
+.skills-container {
+  display: flex;
+  flex-direction: row; /* Change the flex direction to row */
+  align-items: flex-start; /* Align items to the top */
+  justify-content: center;
+  gap: 20px; /* Add some gap between the skill images */
+}
+
+.skill-image {
+  position: relative;
+  display: flex; /* Change to flex to allow vertical alignment */
+  flex-direction: column; /* Arrange image and dropdown content vertically */
+  align-items: center; /* Center items horizontally */
+}
+
+.skill-image img {
+  width: 200px;
+  height: 150px;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: block;
+  position: absolute;
+  top: 100%; /* Position the dropdown content below the skill image */
+  background-color: #f9f9f9;
+  padding: 10px;
+  width: 200px; /* Adjust the width of the dropdown content as needed */
+}
+
+.skill-image:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+}
+
+.dropdown-list li {
+  margin-bottom: 5px;
+}
   
 
 /* Media Queries */
