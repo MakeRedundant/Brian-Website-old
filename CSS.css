@@ -86,6 +86,7 @@ body {
     height: 100vh; /* Set section height to full viewport height */
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
   } 
 
@@ -134,6 +135,7 @@ body {
 .nav {
   position: fixed;
   display: flex;
+  z-index: 9999; /*nav bar is always visible even when scrolling up */
 }
 
 ul.nav {
@@ -392,22 +394,80 @@ ul.nav a:hover {
 
 /* Stuff for the side projects */
 .Side-Projects {
-  padding-top: 40px;
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
-  align-items: flex-start;
+  flex-wrap: wrap;
+  padding-top: 60px;
 }
 
-.Side-Projects img {
-  width: 300px;
+
+.card img {
+
   height: 300px;
+  width: 300px;
+  margin-bottom: 20px;
   object-fit: cover;
+  text-align: center;
+  margin-right: 40px; /*some space between the images*/
+}
+
+
+.card:hover {
+  transform: scale(1.1); /* Increases the size with scale */
+  transition: transform 0.3s ease-in-out; /* Add a smooth transition effect */
+}
+
+
+/*Contact Stuff */
+
+#Contact {
+  padding: 20px;
+}
+
+
+.contact-details p {
   margin-bottom: 10px;
 }
 
+.contact-details a {
+  text-decoration: none;
+  color: blue;
+}
 
+.contact-details a:hover {
+  text-decoration: underline;
+}
+/*For the text area */
+#message {
+  width: 100%;
+  height: 150px;
+  resize: vertical;
+  padding: 5px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+/* Focus selector when the user is active in the textarea */
+#message:focus {
+  outline: none;
+  border-color: blue;
+  box-shadow: 0 0 5px blue;
+}
 
+/*Footer */
+
+footer {
+  background-color: black;
+  padding: 20px;
+  text-align: center;
+
+}
+
+footer p {
+  color: white;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
 
 /* Media Queries */
 /* Extra small devices (phones, 600px and down) */
