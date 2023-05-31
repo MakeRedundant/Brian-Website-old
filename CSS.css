@@ -408,13 +408,17 @@ ul.nav a:hover {
   margin-bottom: 20px;
   object-fit: cover;
   text-align: center;
-  margin-right: 40px; /*some space between the images*/
+  margin-right: 30px; /*some space between the images*/
 }
 
 
 .card:hover {
   transform: scale(1.1); /* Increases the size with scale */
   transition: transform 0.3s ease-in-out; /* Add a smooth transition effect */
+}
+
+.figcaption {
+  font-size: 18px;
 }
 
 
@@ -455,7 +459,6 @@ ul.nav a:hover {
 }
 
 /*Footer */
-
 footer {
   background-color: black;
   padding: 20px;
@@ -468,6 +471,7 @@ footer p {
   font-size: 20px;
   margin-bottom: 10px;
 }
+
 
 /* Media Queries */
 /* Extra small devices (phones, 600px and down) */
