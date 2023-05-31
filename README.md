@@ -1,5 +1,5 @@
-## Brian-Website
-My Personal Website
+## Brian Trang Website
+
 ## Description
 This is my personal website that I have made to start my journey into web development. It contains HTML, CSS and some Javascript code. The contents of the website describes briefly about me, skills, projects and how to contact me.
 
