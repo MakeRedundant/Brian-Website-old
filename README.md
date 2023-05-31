@@ -3,9 +3,13 @@ My Personal Website
 ## Description
 This is my personal website that I have made to start my journey into web development. It contains HTML, CSS and some Javascript code. The contents of the website describes briefly about me, skills, projects and how to contact me.
 
+
 ## Usage
 Employers can click the link below and view my deployed website.
 
+## Screenshot
+
+![Website GIF](./assets/My%20Personal%20Website%20gif.gif)
 
 ## Source Code
 https://makeredundant.github.io/Brian-Website/
