@@ -278,7 +278,7 @@ ul.nav a:hover {
   flex-direction: row; /* Change the flex direction to row */
   align-items: flex-start; /* Align items to the top */
   justify-content: center;
-  gap: 20px; /* Add some gap between the skill images */
+  gap: 40px; /* Add some gap between the skill images */
 }
 
 .skill-image {
@@ -289,8 +289,8 @@ ul.nav a:hover {
 }
 
 .skill-image img {
-  width: 200px;
-  height: 150px;
+  width: 250px;
+  height: 250px;
   cursor: pointer;
 }
 /*Dropdown box */
@@ -298,7 +298,7 @@ ul.nav a:hover {
   display: none; /* Hide the dropdown content by default */
   position: absolute;
   top: 100%; /* Position the dropdown content below the skill image */
-  background-color: #f9f9f9;
+  background-color: white;
   padding: 10px;
   width: 200px; /* Adjust the width of the dropdown content as needed */
 }
@@ -311,13 +311,103 @@ ul.nav a:hover {
   list-style: none;
   margin: 0;
   padding: 0;
-  font-size: 14px;
+  font-size: 20px;
 }
 
 .dropdown-list li {
   margin-bottom: 5px;
+  color: black;
+
 }
-  
+
+/*Project stuff */
+
+.Main-Project img {
+    width: 600px;
+    max-width: 600px;
+    position: relative;
+    height: auto;
+}
+
+.Horiseon:hover {
+  transform: scale(1.1); /* Increase the size with scale */
+  transition: transform 0.3s ease-in-out; /* Add a smooth transition effect */
+}
+
+.dropdown-Horiseon {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-Horiseon button {
+  padding: 10px 20px;
+  border-radius: 20px;
+  background-color: blue;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  margin-right: 30px; /* Add a margin-right for the gap */
+}
+
+.dropdown-Horiseon-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  color: black;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 10px;
+  z-index: 1;
+}
+
+.dropdown-Horiseon:hover .dropdown-Horiseon-content {
+  display: block;
+}
+
+
+
+/* Styling for the buttons for the main project */
+
+.Main-project-buttons {
+  padding-top: 40px; /* Adjust the desired amount of padding */
+}
+
+
+.Main-project-buttons a.button  {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 20px;
+  background-color: blue;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  margin-right: 30px; /* Add a margin-right for the gap */
+}
+
+/*hover effect that inverts the colours */
+.Main-project-buttons a.button:hover {
+  background-color: white;
+  color: blue;
+}
+
+/* Stuff for the side projects */
+.Side-Projects {
+  padding-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.Side-Projects img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+
+
 
 /* Media Queries */
 /* Extra small devices (phones, 600px and down) */
