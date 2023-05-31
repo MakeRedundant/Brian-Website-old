@@ -22,34 +22,49 @@ body {
     font-size: 40px;
     
   }
- /*Animation for About*/
+  /*Animation for About Me */
   .header-about {
-    font-size: 120px;
-    opacity: 0;
-    position: absolute;
-    left: 0px;
+    font-size: 100px;
+    opacity: 0.6;
+    position: relative;
+    transform: translate(-50%, -50%);
     z-index: -1;
-    animation: fade-in 4s ease-out infinite;
+    animation: slide-in-about 6s ease-out forwards infinite;
   }
-  
-  @keyframes fade-in {
+  /*up and down animation */
+  @keyframes slide-in-about {
     0% {
+      transform: translateY(-100%); 
       opacity: 0;
     }
     100% {
+      transform: translateY(150%);
       opacity: 0.6;
     }
   }
   /*Animation for Experience*/
   .header-experience {
     font-size: 120px;
-    opacity: 0;
-    position: absolute;
+    opacity: 0.6;
+    position: relative;
     right: 0;
+    transform: translate(-50%, -50%);
     z-index: -1;
-    animation: fade-in 4s ease-out infinite;
+    animation: slide-in-experience 9s ease-out forwards infinite;
   }
   
+  /*Right to left animation */
+@keyframes slide-in-experience {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 0.6;
+  }
+}
+
     #About {
     height: 100vh;
     display: flex;
@@ -278,9 +293,9 @@ ul.nav a:hover {
   height: 150px;
   cursor: pointer;
 }
-
+/*Dropdown box */
 .dropdown-content {
-  display: block;
+  display: none; /* Hide the dropdown content by default */
   position: absolute;
   top: 100%; /* Position the dropdown content below the skill image */
   background-color: #f9f9f9;
@@ -313,12 +328,6 @@ ul.nav a:hover {
   p {
     font-size: 40px;
   }
-  /* Default font sizes for animation elements */
-  #About .header-about,
-  #Experience .header-experience,
-  #Skills .header-skills {
-    animation: none;
-  }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -326,12 +335,6 @@ ul.nav a:hover {
   ul a,
   p {
     font-size: 40px;
-  }
-  /* Default font sizes for animation elements */
-  #About .header-about,
-  #Experience .header-experience,
-  #Skills .header-skills {
-    animation: none;
   }
 }
 
@@ -343,12 +346,6 @@ ul.nav a:hover {
   p {
     font-size: 40px;
   }
-  /* Default font sizes for animation elements */
-  #About .header-about,
-  #Experience .header-experience,
-  #Skills .header-skills {
-    animation: none;
-  }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -359,12 +356,6 @@ ul.nav a:hover {
   p {
     font-size: 30px;
   }
-  /* Default font sizes for animation elements */
-  #About .header-about,
-  #Experience .header-experience,
-  #Skills .header-skills {
-    animation: none;
-  }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
@@ -374,11 +365,5 @@ ul.nav a:hover {
   }
   p {
     font-size: 30px;
-  }
-  /* Default font sizes for animation elements */
-  #About .header-about,
-  #Experience .header-experience,
-  #Skills .header-skills {
-    animation: 120px;
   }
 }
