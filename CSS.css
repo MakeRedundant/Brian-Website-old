@@ -1,523 +1,527 @@
 body {
-    margin: 0;
-    transition: background-color 0.5s ease;
-  }
-  
-  #hello {
-    position: relative;
-    font-size: 60px;
-  }
+  margin: 0;
+  transition: background-color 0.5s ease; /*smooth transition for background color change
+  i.e dark mode */
+}
 
-  p {
-    font-size: 30px;
-    font-family: "Times New Roman", Serif;
-  }
+#hello {
+  position: relative;
+  font-size: 60px;
+}
+
+p {
+  font-size: 30px;
+  font-family: "Times New Roman", Serif;
+}
+/*For the hello function */
+h1 { 
+  color: gold;
   
-  h1 {
-    color: gold;
-    
-  }
+}
+
+h2, h3, h4, h5, h6 {
+  font-size: 40px;
   
-  h2, h3, h4, h5, h6 {
-    font-size: 40px;
-    
-  }
-  /*Animation for About Me */
-  .header-about {
-    font-size: 100px;
-    opacity: 0.6;
-    position: relative;
-    transform: translate(-50%, -50%);
-    z-index: -1;
-    animation: slide-in-about 6s ease-out forwards infinite;
-  }
-  /*up and down animation */
-  @keyframes slide-in-about {
-    0% {
-      transform: translateY(-100%); 
-      opacity: 0;
-    }
-    100% {
-      transform: translateY(150%);
-      opacity: 0.6;
-    }
-  }
-  /*Animation for Experience*/
-  .header-experience {
-    font-size: 120px;
-    opacity: 0.6;
-    position: relative;
-    right: 0;
-    transform: translate(-50%, -50%);
-    z-index: -1;
-    animation: slide-in-experience 9s ease-out forwards infinite;
-  }
-  
-  /*Right to left animation */
-@keyframes slide-in-experience {
+}
+/*Animation for About Me */
+.header-about {
+  font-size: 100px;
+  opacity: 0.6; 
+  position: relative;
+  transform: translate(-50%, -50%);
+  z-index: -1; /*sets the animation behind so not to intefer */
+  animation: slide-in-about 6s ease-out forwards infinite; /* Applies animation with a duration of 6 seconds, eases out,
+   forwards fill mode and loops forever */
+}
+/*up and down animation */
+@keyframes slide-in-about {
   0% {
-    transform: translateX(100px);
-    opacity: 0;
+    transform: translateY(-100%); /* Move its up the Y axis */
+    opacity: 0; /*starting opacity */
   }
   100% {
-    transform: translateX(0px);
-    opacity: 0.6;
+    transform: translateY(150%); /*Moves it down */
+    opacity: 0.6; /*ending opacity on animation end*/
   }
 }
+/*Animation for Experience*/
+.header-experience {
+  font-size: 100px;
+  opacity: 0.6;
+  position: relative;
+  right: 0;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  animation: slide-in-experience 9s ease-out forwards infinite;
+}
 
-    #About {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;  
-    text-align: center; /* Add text-align: center to center the content horizontally */
-  } 
+/*Right to left animation */
+@keyframes slide-in-experience {
+0% {
+  transform: translateX(100px);/*moves it on the x-axis*/
+  opacity: 0;
+}
+100% {
+  transform: translateX(0px); /*to the left */
+  opacity: 0.6;
+}
+}
 
-  #Experience {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
+  #About {
+  height: 100vh; /*sets it to the full viewport i.e full screen*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;  
+  text-align: center; /* Add text-align: center to center the content horizontally */
+} 
 
-  #Skills {
-    height: 100vh; /* Set section height to full viewport height */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  } 
+#Experience {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 
-  .table-container {
-    display: flex;
-    margin-right: 20px;
-  }
+#Skills {
+  height: 100vh; /* Set section height to full viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+} 
 
-  table {
-    border: 10px solid;
-  }
-  table, th, td {
-    border: 10px solid black;
-
-  }
-
-  #Projects {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
+#Projects {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 
 #Contact {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-  #Codingtext {
-    font-size: 30px;
-    font-family: Courier;
-  }
-
-  .fullscreen {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-/* Navigtion bar */
-
-.nav {
-  position: fixed;
+  height: 100vh;
   display: flex;
-  z-index: 9999; /*nav bar is always visible even when scrolling up */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#Codingtext {
+  font-size: 30px;
+  font-family: Courier;
+}
+
+.fullscreen,
+#About,
+#Experience,
+#Skills
+#Projects {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Navigtion bar */
+.nav {
+position: fixed;
+display: flex;
+z-index: 9999; /*nav bar is always visible even when scrolling up */
 }
 
 ul.nav {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  background-color: black;
-  display: flex;
+list-style-type: none;
+font-size: 30px;
+margin: 0;
+padding: 0;
+position: fixed; /*needs to stick to the top of the screen */
+top: 0;
+left: 0;
+right: 0;
+background-color: black; /*needs to be consistent and not conflict with dark mode */
+display: flex;
 }
-
+/*Nav bar colours, really cool way to colour quickly*/
 li:nth-child(1) a {
-  color: blue;
+color: blue;
 }
 
 li:nth-child(2) a {
-  color: green;
+color: green;
 }
 
 li:nth-child(3) a {
-  color: yellow;
+color: yellow;
 }
 
 li:nth-child(4) a {
-  color: red;
+color: red;
 }
 
 li:nth-child(5) a {
-  color: purple;
+color: purple;
 }
 
 li.nav-item {
-  text-align: center; /* Center the text horizontally */
+text-align: center; /* Center the text horizontally */
 }
 
 ul.nav a {
-  display: block;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
+display: block;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
 }
 
 ul.nav a:hover {
-  background-color: white;
+background-color: white;
 }
 
 /*Dark Mode */
-  .dark-mode {
-    background-color: black;
-    color: white;
-  }
-  #dark-mode-toggle-nav {
-    margin-left: auto;
-    background-color: gray;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    line-height: 44px;
-  }
-  
-  #dark-mode-toggle-nav span {
-    font-size: 25px;
-  }
-  #dark-mode-toggle-nav span:before {
-    content: "☀️";
-  }
-  .dark-mode #dark-mode-toggle-nav span:before {
-    content: "🌙";
-  }
-  #dark-mode-toggle-nav:after {
-    content: "Enable Dark Mode";
-    position: absolute;
-    bottom: 5px; /*Aligns the toop tip to the right of the button */
-    right: 0; /* Align the tooltip with the right edge of the button */
-    transform: translateX(-50%);
-    background-color: #333;
-    color: white;
-    padding: 2px 5px;
-    font-size: 24px;
-    border-radius: 5px;
-    white-space: nowrap;
-  }
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+#dark-mode-toggle-nav {
+  margin-left: auto;
+  background-color: gray;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 44px;
+}
 
-  .dark-mode #dark-mode-toggle-nav:after {
-    content: "Enable Light Mode";
-  }
-  
-  #hello:after {
-    content: "Click me!";
-    position: relative;
-    top: -50px;
-    right: 70px;
-    background-color: #333;
-    color: white;
-    padding: 2px 5px;
-    font-size: 20px;
-    border-radius: 5px;
-  }
+#dark-mode-toggle-nav span {
+  font-size: 25px;
+}
+#dark-mode-toggle-nav span:before {
+  content: "☀️";
+}
+.dark-mode #dark-mode-toggle-nav span:before {
+  content: "🌙";
+}
+#dark-mode-toggle-nav:after {
+  content: "Enable Dark Mode";
+  position: absolute;
+  bottom: 5px; /*Aligns the toop tip to the right of the button */
+  right: 0; /* Align the tooltip with the right edge of the button */
+  transform: translateX(-50%);
+  background-color: black;
+  color: white;
+  padding: 2px 5px;
+  font-size: 24px;
+  border-radius: 5px;
+  white-space: nowrap;
+}
 
+.dark-mode #dark-mode-toggle-nav:after {
+  content: "Enable Light Mode";
+}
 
-  img {
-    width: 300px;
-    max-width: 300px;
-    position: relative;
-    height: auto;
-  }
-
-  .Container-image { 
-    margin: 30px auto;
-    margin-top: 0;
-    display: flex;
-    padding-top:20px;
-    flex-direction: column; /* Add flex-direction: column */
-    justify-content: flex-start; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    gap: 20px; /* Add gap between image and paragraph */
-  }
+#hello:after {
+  content: "Click me!";
+  position: relative;
+  top: -50px;
+  right: 70px;
+  background-color: #333;
+  color: white;
+  padding: 2px 5px;
+  font-size: 20px;
+  border-radius: 5px;
+}
 
 
-  .background-light {
-    background-color: #f5f5f5; /* Light background color */
-  }
-  
-  .background-dark {
-    background-color: #333333; /* Dark background color */
-    color: white; /* Light text color */
-  }
+img {
+  width: 300px;
+  max-width: 300px;
+  position: relative;
+  height: auto;
+}
+
+.Container-image { 
+  margin: 30px auto;
+  margin-top: 0;
+  display: flex;
+  padding-top:20px;
+  flex-direction: column; /* Add flex-direction: column */
+  justify-content: flex-start; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  gap: 20px; /* Adds gap between image and paragraph */
+}
+
+
+.background-light {
+  background-color: #f5f5f5; /* Light background color */
+}
+
+.background-dark {
+  background-color: #333333; /* Dark background color */
+  color: white; /* Light text color */
+}
 
 /*Skills section */
 .skill-image {
-  position: relative;
-  display: inline-block;
+position: relative;
+display: inline-block;
 }
 
 .skills-container {
-  display: flex;
-  flex-direction: row; /* Change the flex direction to row */
-  align-items: flex-start; /* Align items to the top */
-  justify-content: center;
-  gap: 40px; /* Add some gap between the skill images */
+display: flex;
+flex-direction: row; /* Astronauts in a row */
+align-items: flex-start; /* Align items to the top */
+justify-content: center;
+gap: 40px; /* Add some gap between the skill images */
 }
 
 .skill-image {
-  position: relative;
-  display: flex; /* Change to flex to allow vertical alignment */
-  flex-direction: column; /* Arrange image and dropdown content vertically */
-  align-items: center; /* Center items horizontally */
+position: relative;
+display: flex; 
+flex-direction: column; /* Arrange image and dropdown content vertically */
+align-items: center; /* Center items horizontally */
 }
 
 .skill-image img {
-  width: 250px;
-  height: 250px;
-  cursor: pointer;
+width: 250px;
+height: 250px;
+cursor: pointer;
 }
 /*Dropdown box */
 .dropdown-content {
-  display: none; /* Hide the dropdown content by default */
-  position: absolute;
-  top: 100%; /* Position the dropdown content below the skill image */
-  background-color: white;
-  padding: 10px;
-  width: 200px; /* Adjust the width of the dropdown content as needed */
+display: none; /* Hide the dropdown content by default */
+position: absolute;
+top: 100%; /* Position the dropdown content below the skill image */
+background-color: white;
+padding: 10px;
+width: 200px; /* Adjust the width of the dropdown content as needed */
 }
 
 .skill-image:hover .dropdown-content {
-  display: block;
+display: block;
 }
-
+/*Dropdown list for the 3 astronauts */
 .dropdown-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  font-size: 20px;
+list-style: none;
+margin: 0;
+padding: 0;
+font-size: 24px;
+border-color: blue; 
+box-shadow: 0 0 15px blue; /*Trying to make a consistent blue shadow for the 3D effect */
 }
 
 .dropdown-list li {
-  margin-bottom: 5px;
-  color: black;
+margin-bottom: 5px;
+color: black;
 
 }
 
 /*Project stuff */
 
-.Main-Project img {
-    width: 600px;
-    max-width: 600px;
-    position: relative;
-    height: auto;
+.Main-Project img { /*Horiseon image*/
+  width: 600px;
+  max-width: 600px;
+  position: relative;
+  height: auto;
 }
 
 .Horiseon:hover {
-  transform: scale(1.1); /* Increase the size with scale */
-  transition: transform 0.3s ease-in-out; /* Add a smooth transition effect */
+transform: scale(1.1); /* Increase the size with scale/looks better than using
+hiegth width */
+transition: transform 0.3s ease-in-out; /* Add a smooth transition effect */
 }
 
-.dropdown-Horiseon {
-  position: relative;
-  display: inline-block;
+.dropdown-Horiseon { /*drop down box for main project */
+position: relative;
+font-size: 18px;
 }
 
-.dropdown-Horiseon button {
-  padding: 10px 20px;
-  border-radius: 20px;
-  background-color: blue;
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  margin-right: 30px; /* Add a margin-right for the gap */
+.dropdown-Horiseon button { /*consistent sytle as the other buttons */
+padding: 10px 20px;
+border-radius: 20px;
+background-color: blue;
+font-size: 24px;
+color: white;
+text-decoration: none;
+font-weight: bold;
+margin-right: 30px; /* Add a margin-right for the gap */
 }
 
 .dropdown-Horiseon-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  color: black;
-  min-width: 200px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  padding: 10px;
-  z-index: 1;
+display: none;
+position: absolute;
+background-color: white;
+color: black;
+min-width: 200px; /* Set minimum width for the dropdown content */
+box-shadow: 0px 8px 16px 0px blue; /*makes it looks more 3D */
+padding: 10px;
+z-index: 1; /*need this to make the drop down overlap the other projects */
 }
 
 .dropdown-Horiseon:hover .dropdown-Horiseon-content {
-  display: block;
+display: block; /* Show the dropdown content on hover */
 }
-
 
 
 /* Styling for the buttons for the main project */
 
 .Main-project-buttons {
-  padding-top: 40px; /* Adjust the desired amount of padding */
+padding-top: 40px; /* Adjust the desired amount of padding */
+font-size: 24px;
 }
 
 
 .Main-project-buttons a.button  {
-  display: inline-block;
-  padding: 10px 20px;
-  border-radius: 20px;
-  background-color: blue;
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  margin-right: 30px; /* Add a margin-right for the gap */
+display: inline-block;
+padding: 10px 20px;
+border-radius: 20px;
+background-color: blue;
+color: white;
+text-decoration: none;
+font-weight: bold;
+margin-right: 30px; /* Add a margin-right for the gap */
 }
 
 /*hover effect that inverts the colours */
 .Main-project-buttons a.button:hover {
-  background-color: white;
-  color: blue;
+background-color: white;
+color: blue;
 }
 
 /* Stuff for the side projects */
 .Side-Projects {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  padding-top: 60px;
+display: flex;
+justify-content: space-evenly; /*i want it horzintally with equal space*/
+flex-wrap: wrap;
+padding-top: 60px; /*Makes room for the main project */
+padding-left: 30px;
+margin-bottom: 40px; /*More spacing below/ need for mobile boxes stack */
 }
 
-
+/*images of the side proojects */
 .card img {
-
-  height: 300px;
-  width: 300px;
-  margin-bottom: 20px;
-  object-fit: cover;
-  text-align: center;
-  margin-right: 30px; /*some space between the images*/
+height: 300px;
+width: 300px;
+margin-bottom: 30px; /*More spacing below */
+object-fit: cover; /*Makes images look better/ cover whole container */
+text-align: center;
+margin-right: 30px; /*some space between the images*/
 }
 
 
 .card:hover {
-  transform: scale(1.1); /* Increases the size with scale */
-  transition: transform 0.3s ease-in-out; /* Add a smooth transition effect */
+transform: scale(1.1); /* Increases the size with scale */
+transition: transform 0.3s ease-in-out; /* Add a smooth transition effect */
 }
 
-.figcaption {
-  font-size: 18px;
+figcaption {
+font-size: 24px;
+font-weight: bold;
 }
 
 
 /*Contact Stuff */
-
-#Contact {
-  padding: 20px;
-}
-
-
 .contact-details p {
-  margin-bottom: 10px;
+margin-bottom: 10px; /*some needed spacing between each line */
 }
 
 .contact-details a {
-  text-decoration: none;
-  color: blue;
+text-decoration: none; /* removes the underline */
+color: blue;
 }
 
-.contact-details a:hover {
-  text-decoration: underline;
+.contact-details a:hover { 
+text-decoration: underline;
+color:gold;
 }
 /*For the text area */
 #message {
-  width: 100%;
-  height: 150px;
-  resize: vertical;
-  padding: 5px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+width: 100%;
+height: 150px;
+resize: vertical; /* really cool, lets the user drag the text area down */
+padding: 5px;
+font-size: 16px;
+border: 1px solid black;
+border-radius: 4px;
 }
 /* Focus selector when the user is active in the textarea */
 #message:focus {
-  outline: none;
-  border-color: blue;
-  box-shadow: 0 0 5px blue;
+outline: none;
+border-color: blue;
+box-shadow: 0 0 15px blue;
 }
 
 /*Footer */
 footer {
-  background-color: black;
-  padding: 20px;
-  text-align: center;
-
+background-color: black; /*need to distinguish the end of the page */
+padding: 20px;
+text-align: center;
+color: white;
+font-size: 20px;
+margin-bottom: 10px;
 }
 
-footer p {
-  color: white;
-  font-size: 20px;
-  margin-bottom: 10px;
-}
 
 
 /* Media Queries */
+/* Very small devices (phones, 500px and down) */ 
+@media only screen and (max-width: 335px) {
+ul a {
+  font-size: 30px;
+}
+p {
+  font-size: 30px;
+}
+}
+
+
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-  ul a {
-    font-size: 40px;
-  }
-  p {
-    font-size: 40px;
-  }
+ul a {
+  font-size: 35px;
+}
+p {
+  font-size: 40px;
+}
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 601px) and (max-width: 768px) {
-  ul a,
-  p {
-    font-size: 40px;
-  }
+ul a,
+p {
+  font-size: 40px;
+}
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 769px) and (max-width: 992px) {
-  ul a {
-    font-size: 30px;
-  }
-  p {
-    font-size: 40px;
-  }
+ul a {
+  font-size: 30px;
+}
+p {
+  font-size: 40px;
+}
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 993px) and (max-width: 1200px) {
-  ul a {
-    font-size: 30px;
-  }
-  p {
-    font-size: 30px;
-  }
+ul a {
+  font-size: 30px;
+}
+p {
+  font-size: 30px;
+}
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1201px) {
-  ul a {
-    font-size: 30px;
-  }
-  p {
-    font-size: 30px;
-  }
+ul a {
+  font-size: 30px;
+}
+p {
+  font-size: 30px;
+}
 }
