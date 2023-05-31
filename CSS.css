@@ -442,7 +442,7 @@ width: 100%;
 height: 150px;
 resize: vertical; /* really cool, lets the user drag the text area down */
 padding: 5px;
-font-size: 16px;
+font-size: 30px;
 border: 1px solid black;
 border-radius: 4px;
 }
