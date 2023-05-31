@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Brian Trang">
     <title>Brian Trang</title>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="CSS.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css"> <!--For the flags and countries-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> <!--For the icons in the Contact Section-->
 </head>
 <body>
   <header>
@@ -16,23 +18,26 @@
         <li><a href="#Skills">Skills</a></li>
         <li><a href="#Projects">Projects</a></li>
         <li><a href="#Contact">Contact</a></li>
-        <li id="dark-mode-toggle-nav"><span></span></li>
-      </ul>
+        <li id="dark-mode-toggle-nav"><span></span></li> <!--Dark Mode Button in the nav bar--> 
+      </ul> <!--Span tag needed for CSS styling-->
     </nav>
   </header>
 
+  <main>
+
   <section id="hello-section" class="fullscreen">
-    <h1 id="hello" onclick="changeLanguage()">Hello</h1>
+    <h1 id="hello" onclick="changeLanguage()">Hello</h1> <!--Hello in different langauges-->
     <p>My name is Brian, and I'm a software engineer</p>
-    <p>I like to eat good food 👔 and wear good clothes. 🍔</p>
+    <p>I like to eat good food 👔 and wear good clothes 🍔</p>
     <br>
     <div id="Codingtext"></div>
     <p>Look around, have some fun and I hope to hear back from you!</p>
   </section>
-  
+  <!--About-->
   <section id="About"> 
+    <article>
     <h2>Brian T</h2>
-    <div class="header-about"><pre>    About                 Me         </pre></div>
+    <div class="header-about"><pre>    About                 Me         </pre></div> <!--Pre was used to leave the space between About Me so the animation would go between the photo-->
     <div class="Container-image">
       <img src="./assets/Paedriatic-Gls.jpg" alt="My Mug shot">
         <p> After more than 5 years as a optometrist.<br>
@@ -40,24 +45,26 @@
       When i'm not coding you can find me binge watching youtube coding tutorials or cat videos.
         </p>
     </div>
+   </article>
   </section>
 
-  
-  <section id="Experience">
+  <!--Experience-->
+  <section id="Experience"> <!--To be added-->
     <h3>Experience</h3>
-  <div class="Skills-container"></div>
+  <div class="Experience-container">
     <div class="header-experience">Experience</div>
     <p>Insert lack of experience here</p>
+  </div>
   </section>
 
-
+<!--Skills-->
   <section id="Skills">
     <h4>Skills</h4>
-    <p>Every good developer needs a good set of skills <br>
+    <p>Every good developer needs a good set of skills<br>
     Hover over the astronauts to see mine!</p>
     <div class="skills-container">
       <div class="skill-image frontend">
-        <img src="assets/front end Astronaut.jpg" alt="Frontend Skills" class="frontend-image">
+        <img src="assets/front end Astronaut.jpg" alt="Frontend Skills">
         <figcaption>Front End</figcaption>
         <div class="dropdown-content">
           <ul class="dropdown-list">
@@ -104,7 +111,7 @@
   </section>
   
   
-
+<!--Projects-->
  <section id="Projects">
 <h5>Projects</h5>
     <p>Check out my projects here</p>
@@ -119,13 +126,13 @@
         This wepage contains information about Search engine optimatization, Online reputation management, Social media marketing,
        Lead Generation, Brand Awareness and Cost Management.</p> 
     </div>
-    <a href="https://github.com/MakeRedundant/Horiseon-marketing" class="button" target="_blank">Source Code</a>
+    <a href="https://github.com/MakeRedundant/Horiseon-marketing" class="button" target="_blank">Source Code</a> <!--Both links are working!!-->
     <a href="https://makeredundant.github.io/Horiseon-marketing/" class="button" target="_blank">Live Demo</a>
     </div>
   </div>
   </div>
-  <div class="Side-Projects">
-    <div class="card">
+  <div class="Side-Projects"> <!--Side projects cards, placeholders without links-->
+    <div class="card"> <!--Used cards for reusability-->
       <img src="./assets/glasses-robots.jpg" alt="Glasses and robots">
       <figcaption>Online Glasses store</figcaption>
     </div>
@@ -144,34 +151,30 @@
   </div>
 </section>
   
- 
+ <!--Contact-->
 <section id="Contact">
 <h6>Contact</h6>
-<div class="contact-details">
+<div class="contact-details"> <!--all links open in a new tab-->
   <p><i class="fas fa-phone"></i> Phone: <a href="tel:+9999999999">999-999-999</a></p>
   <p><i class="fas fa-globe"></i> Website: <a href="https://makeredundant.github.io/Brian-Website/" target="_blank">Brian.T.com</a></p>
   <p><i class="fas fa-envelope"></i> Email: <a href="mailto:Brian.trang@hotmail.com">Brian.trang@hotmail.com</a></p>
   <p><i class="fab fa-github"></i> Github: <a href="https://github.com/MakeRedundant" target="_blank">GitHub Profile</a></p>
   <p><i class="fas fa-file-pdf"></i> Resume: <a href="https://drive.google.com/drive/folders/178aJT71OVJzvM4JJm0IqHat_YxyOVq7O?usp=drive_link" target="_blank">Download Resume</a></p>
   <textarea id="message" placeholder="Send me a message here"></textarea>
-  <button id="send-email">Send Message</button>
+  <button id="send-email">Send Message</button> <!--Currently not working-->
 </div>
 </section>
-  
+</main>
 
-
-<script src="script.js"></script>
-
-</body>
-
+<!--Footer-->
 <footer>
 <p>Thanks for scrolling to the bottom! 
   <br> Hope to hear from you soon 
   <br>
   Brian
 </p>
-
-</footer>
-
 </body>
+<script src="script.js"></script>
+</footer>
+<!--To be added some confetti-->
 </html>
