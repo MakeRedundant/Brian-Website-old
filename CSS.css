@@ -1,5 +1,10 @@
+:root { /*save some time with resuseable values*/
+  --background-color-black: black;
+  --font-color-white: white;
+  --box-color-shadow-blue: 0 0 15px blue;
+}
+
 body {
-  margin: 0;
   transition: background-color 0.5s ease; /*smooth transition for background color change
   i.e dark mode */
 }
@@ -7,6 +12,7 @@ body {
 #hello {
   position: relative;
   font-size: 60px;
+  cursor: pointer; /*i want people to know they can click it */
 }
 
 p {
@@ -18,11 +24,36 @@ h1 {
   color: gold;
   
 }
-
+/*All the headers which the exception of the Hello */
 h2, h3, h4, h5, h6 {
-  font-size: 40px;
-  
+  font-size: 60px;
+  font-weight: bolder;
+  text-transform: uppercase; /* Transform the text to uppercase */
+  justify-content: center;
+  /*need to keep font color the same for the dark mode*/
 }
+/*Combined similar IDs togehter*/
+/*These class + IDs all share the same properties i.e i wanted them 
+to be viewed in a full screen with text aligned in the center */
+.fullscreen,
+#About,
+#Experience,
+#Skills,
+#Projects,
+#Contact {
+  height: 100vh; /*for the full screen effect */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+#Codingtext {
+  font-size: 30px;
+  font-family: Courier;
+}
+
 /*Animation for About Me */
 .header-about {
   font-size: 100px;
@@ -30,8 +61,7 @@ h2, h3, h4, h5, h6 {
   position: relative;
   transform: translate(-50%, -50%);
   z-index: -1; /*sets the animation behind so not to intefer */
-  animation: slide-in-about 6s ease-out forwards infinite; /* Applies animation with a duration of 6 seconds, eases out,
-   forwards fill mode and loops forever */
+  animation: slide-in-about 6s ease-out forwards infinite; /* Applies animation with a duration of 6 seconds, eases out and loops forever */
 }
 /*up and down animation */
 @keyframes slide-in-about {
@@ -67,63 +97,6 @@ h2, h3, h4, h5, h6 {
 }
 }
 
-  #About {
-  height: 100vh; /*sets it to the full viewport i.e full screen*/
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;  
-  text-align: center; /* Add text-align: center to center the content horizontally */
-} 
-
-#Experience {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-#Skills {
-  height: 100vh; /* Set section height to full viewport height */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-} 
-
-#Projects {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-#Contact {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-#Codingtext {
-  font-size: 30px;
-  font-family: Courier;
-}
-
-.fullscreen,
-#About,
-#Experience,
-#Skills
-#Projects {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
 /* Navigtion bar */
 .nav {
 position: fixed;
@@ -133,16 +106,13 @@ z-index: 9999; /*nav bar is always visible even when scrolling up */
 
 ul.nav {
 list-style-type: none;
-font-size: 30px;
-margin: 0;
-padding: 0;
 position: fixed; /*needs to stick to the top of the screen */
-top: 0;
-left: 0;
-right: 0;
+left: 0; /*or it will stick to the side  */
+right: 0; /*or it will stick to the side  */
 background-color: black; /*needs to be consistent and not conflict with dark mode */
 display: flex;
 }
+
 /*Nav bar colours, really cool way to colour quickly*/
 li:nth-child(1) a {
 color: blue;
@@ -174,21 +144,22 @@ text-align: center;
 padding: 14px 16px;
 text-decoration: none;
 }
-
+/*Hover effect on the nav bar, used white for better contrast */
 ul.nav a:hover {
 background-color: white;
 }
 
 /*Dark Mode */
+/*!!!!Dont touch the colours this is needed for dark mode function, no variables*/
 .dark-mode {
   background-color: black;
   color: white;
 }
 #dark-mode-toggle-nav {
-  margin-left: auto;
-  background-color: gray;
+  margin-left: auto; /*very important in keeping the button on the right side */
+  background-color: gray; /*gray so the button can be seen */
   border: none;
-  cursor: pointer;
+  cursor: pointer; /*i want people  to know they can click it */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -198,43 +169,42 @@ background-color: white;
 #dark-mode-toggle-nav span {
   font-size: 25px;
 }
-#dark-mode-toggle-nav span:before {
+#dark-mode-toggle-nav span:before { /*These icons change whether in dark mode or light mode */
   content: "☀️";
 }
 .dark-mode #dark-mode-toggle-nav span:before {
   content: "🌙";
 }
-#dark-mode-toggle-nav:after {
-  content: "Enable Dark Mode";
+/*After pseudo element that can be used as a tool top*/
+#dark-mode-toggle-nav:after { 
+  content: "Enable Dark Mode"; /*Default until pressed */
   position: absolute;
-  bottom: 5px; /*Aligns the toop tip to the right of the button */
-  right: 0; /* Align the tooltip with the right edge of the button */
-  transform: translateX(-50%);
-  background-color: black;
-  color: white;
+  right: 35px; /* Align the tooltip with the right edge of the button */
+  background-color: var(--background-color-black);
+  color: var(--font-color-white);
   padding: 2px 5px;
-  font-size: 24px;
+  font-size: 30px;
   border-radius: 5px;
-  white-space: nowrap;
+  white-space: nowrap; /*This prevents the text from wrapping onto a new line, ensuring it remains on a single line.*/
 }
 
 .dark-mode #dark-mode-toggle-nav:after {
-  content: "Enable Light Mode";
+  content: "Enable Light Mode"; /*When in dark mode */
 }
-
+/*Tool tip saying click me so a user knows they can click it */
 #hello:after {
-  content: "Click me!";
+  content: "Click me!"; 
   position: relative;
   top: -50px;
   right: 70px;
-  background-color: #333;
-  color: white;
+  background-color: var(--background-color-black);
+  color: var(--font-color-white);
   padding: 2px 5px;
   font-size: 20px;
   border-radius: 5px;
 }
 
-
+/*My picture in the About me section*/
 img {
   width: 300px;
   max-width: 300px;
@@ -255,11 +225,11 @@ img {
 
 
 .background-light {
-  background-color: #f5f5f5; /* Light background color */
+  background-color: white; /* Light background color */
 }
 
 .background-dark {
-  background-color: #333333; /* Dark background color */
+  background-color: black; /* Dark background color */
   color: white; /* Light text color */
 }
 
@@ -309,7 +279,7 @@ margin: 0;
 padding: 0;
 font-size: 24px;
 border-color: blue; 
-box-shadow: 0 0 15px blue; /*Trying to make a consistent blue shadow for the 3D effect */
+box-shadow: var(--box-color-shadow-blue); /*Trying to make a consistent blue shadow for the 3D effect */
 }
 
 .dropdown-list li {
@@ -355,7 +325,7 @@ position: absolute;
 background-color: white;
 color: black;
 min-width: 200px; /* Set minimum width for the dropdown content */
-box-shadow: 0px 8px 16px 0px blue; /*makes it looks more 3D */
+box-shadow: var(--box-color-shadow-blue); /*makes it looks more 3D */
 padding: 10px;
 z-index: 1; /*need this to make the drop down overlap the other projects */
 }
@@ -378,7 +348,7 @@ display: inline-block;
 padding: 10px 20px;
 border-radius: 20px;
 background-color: blue;
-color: white;
+color:var(--font-color-white);
 text-decoration: none;
 font-weight: bold;
 margin-right: 30px; /* Add a margin-right for the gap */
@@ -450,15 +420,15 @@ border-radius: 4px;
 #message:focus {
 outline: none;
 border-color: blue;
-box-shadow: 0 0 15px blue;
+box-shadow: var(--box-color-shadow-blue);
 }
 
 /*Footer */
 footer {
-background-color: black; /*need to distinguish the end of the page */
+background-color: var(--background-color-black); /*need to distinguish the end of the page */
 padding: 20px;
 text-align: center;
-color: white;
+color: var(--font-color-white);
 font-size: 20px;
 margin-bottom: 10px;
 }
@@ -466,7 +436,7 @@ margin-bottom: 10px;
 
 
 /* Media Queries */
-/* Very small devices (phones, 500px and down) */ 
+/* Very small devices (phones, 500px and down) Iphone SE */ 
 @media only screen and (max-width: 335px) {
 ul a {
   font-size: 30px;
@@ -481,7 +451,7 @@ p {
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
 ul a {
-  font-size: 35px;
+  font-size: 40px;
 }
 p {
   font-size: 40px;
@@ -490,7 +460,7 @@ p {
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 601px) and (max-width: 768px) {
-ul a,
+ul.nav a,
 p {
   font-size: 40px;
 }
@@ -498,7 +468,7 @@ p {
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 769px) and (max-width: 992px) {
-ul a {
+ul.nav a {
   font-size: 30px;
 }
 p {
@@ -508,7 +478,7 @@ p {
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 993px) and (max-width: 1200px) {
-ul a {
+ul.nav a {
   font-size: 30px;
 }
 p {
@@ -518,7 +488,7 @@ p {
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1201px) {
-ul a {
+ul.nav a {
   font-size: 30px;
 }
 p {
