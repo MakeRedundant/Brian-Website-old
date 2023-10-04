@@ -7,7 +7,6 @@
 body {
   transition: background-color 0.5s ease; /*smooth transition for background color change
   i.e dark mode */
-
 }
 
 #hello {
@@ -217,6 +216,7 @@ img {
   margin: 30px auto;
   margin-top: 0;
   display: flex;
+  padding-top:20px;
   flex-direction: column; /* Add flex-direction: column */
   justify-content: flex-start; /* Center horizontally */
   align-items: center; /* Center vertically */
